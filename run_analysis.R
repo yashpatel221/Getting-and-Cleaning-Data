@@ -1,3 +1,24 @@
+## Setting the working directory as "./getdata"
+cur_dir<-"./getdata"
+if(!dir.exists("./getdata"))
+        dir.create("./getdata")
+setwd(cur_dir)
+getwd()
+
+---------------------------------------------------------------------------------------------------
+
+## DOwnloading the dataset and unzipping the file
+
+fileUrl<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+zipfile<-"UCI HAR Dataset.zip"
+
+download.file(fileUrl, zipfile)
+
+if(file.exists(zipfile))
+        unzip(zipfile)
+
+---------------------------------------------------------------------------------------------------
+
 ## Loading the dplyr package
 library(dplyr)
 
